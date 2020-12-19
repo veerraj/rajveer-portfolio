@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileModule } from './profile/profile.module';
 import { HttpClientModule } from '@angular/common/http';
 
+
 const routes: Routes = [
   {
     path: '',
