@@ -22,7 +22,7 @@
                                   <input class="form-control" type="text"  placeholder="Name"
                                      formControlName="name"
                                      required />
-                                    
+
                                 </div>
                               </div>
                             </div>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn btn-primary" [disabled]="!contactForm.valid" type="submit">Send</button>
+                                <button class="btn btn-primary" [disabled]="contactForm.invalid" type="submit">Send</button>
                               </div>
                             </div>
                           </form>

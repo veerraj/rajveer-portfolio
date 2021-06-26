@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
- 
+
 
   contactForm:FormGroup;
   constructor(private fb:FormBuilder,private profileService:ProfileService,
@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
         name:['',Validators.required],
         _subject:['',Validators.required],
         _replyto:['',[Validators.required,Validators.email]],
-        message:['',[Validators.required,Validators.minLength(20)]]
+        message:['',[Validators.required]]
     })
   }
 
@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit {
      this.profileService.formSubmit(this.contactForm.value).subscribe((res)=>{
          this.contactForm.reset();
          this.toastr.success('successfully sent', 'I will get back to you soon !');
-     })   
+     })
   }
 
 
